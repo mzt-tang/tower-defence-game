@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://t7japk2bxf06"]
+
+[ext_resource type="Script" path="res://Map/Levels/test_route.gd" id="1_bnu2f"]
+[ext_resource type="PackedScene" uid="uid://coqfn06imlkqy" path="res://Mobs/ship.tscn" id="2_4xwel"]
+
+[sub_resource type="Curve2D" id="Curve2D_4u7as"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 272, -76.3274, -6.73477, 76.3274, 6.73477, 184, 288, -30.3065, -31.4289, 30.3065, 31.4289, 328, 376, 0, 0, 0, 0, 408, 416, -34.9623, 8.4757, 34.9623, -8.4757, 480, 408, -15.8919, 21.1893, 15.8919, -21.1893, 528, 320, 0, 0, 0, 0, 616, 304, 0, 0, 0, 0, 688, 304, 6.88651, 51.9137, -6.88651, -51.9137, 720, 256, 0, 0, 0, 0, 688, 104, -87.552, 0, 87.552, 0, 760, 48, -28.6991, -5.00565, 28.6991, 5.00565, 928, 56, -1.12246, -59.4905, 1.12246, 59.4905, 1016, 136, 0, 0, 0, 0, 1000, 312, 54.3448, -14.2544, -54.3448, 14.2544, 936, 376, 0, 0, 0, 0, 872, 400, 9.35444, -49.4449, -9.35444, 49.4449, 840, 456, 0, 0, 0, 0, 832, 552, 0, 0, 0, 0, 832, 672)
+}
+point_count = 19
+
+[node name="MapRoute" type="Path2D"]
+curve = SubResource("Curve2D_4u7as")
+script = ExtResource("1_bnu2f")
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 4
+width = 5.0
+default_color = Color(0.329412, 0.878431, 0.694118, 0.607843)
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(0, 272)
+rotation = 0.0867383
+loop = false
+
+[node name="StandardShip" parent="PathFollow2D" instance=ExtResource("2_4xwel")]

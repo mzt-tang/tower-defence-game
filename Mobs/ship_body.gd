@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+# change to get_parent speed, health, etc.
 @export var speed = 150
 
 func _physics_process(delta):

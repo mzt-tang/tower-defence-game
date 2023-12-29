@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b0aps2l2i584h" path="res://Assets/Towers/towerDefense_tile180.png" id="1_wy1en"]
 
 [node name="GreenTower" type="Node2D"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_kic4h")
 
 [node name="Base" type="Sprite2D" parent="."]

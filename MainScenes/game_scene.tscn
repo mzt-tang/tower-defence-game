@@ -1,9 +1,98 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmjpkvxg4fpfr"]
+[gd_scene load_steps=8 format=3 uid="uid://bmjpkvxg4fpfr"]
 
 [ext_resource type="Script" path="res://MainScenes/game_scene.gd" id="1_hvlae"]
 [ext_resource type="PackedScene" uid="uid://bbne37m7cf8yo" path="res://Map/Levels/test_level.tscn" id="2_vm0ma"]
+[ext_resource type="Texture2D" uid="uid://q17hq8734qaj" path="res://Assets/blue_button12.png" id="3_1ll1a"]
+[ext_resource type="Script" path="res://MainScenes/ui.gd" id="3_i2mpq"]
+[ext_resource type="Texture2D" uid="uid://ypulfcn0sdrg" path="res://Assets/Towers/towerDefense_tile249.png" id="4_d3auj"]
+[ext_resource type="Texture2D" uid="uid://dl2wsmxa0gjf6" path="res://Assets/Towers/towerDefense_tile250.png" id="5_c13bi"]
+[ext_resource type="Texture2D" uid="uid://dmnefwjalo2r3" path="res://Assets/Towers/towerDefense_tile251.png" id="6_r304r"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_hvlae")
 
 [node name="TestLevel" parent="." instance=ExtResource("2_vm0ma")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("3_i2mpq")
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BuildBar" type="VBoxContainer" parent="UI/HUD"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -300.0
+offset_right = 115.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 10
+
+[node name="GreenTower" type="TextureButton" parent="UI/HUD/BuildBar" groups=["build_buttons"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("3_1ll1a")
+stretch_mode = 0
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/BuildBar/GreenTower"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("4_d3auj")
+expand_mode = 1
+
+[node name="RedTower" type="TextureButton" parent="UI/HUD/BuildBar" groups=["build_buttons"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("3_1ll1a")
+stretch_mode = 0
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/BuildBar/RedTower"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("5_c13bi")
+expand_mode = 1
+
+[node name="MissileTower" type="TextureButton" parent="UI/HUD/BuildBar" groups=["build_buttons"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("3_1ll1a")
+stretch_mode = 0
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/BuildBar/MissileTower"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("6_r304r")
+expand_mode = 1

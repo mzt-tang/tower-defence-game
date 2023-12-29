@@ -13,6 +13,5 @@ curve = SubResource("Curve2D_4u7as")
 script = ExtResource("1_bnu2f")
 
 [node name="Line2D" type="Line2D" parent="."]
-z_index = 4
 width = 5.0
 default_color = Color(0.329412, 0.878431, 0.694118, 0.607843)

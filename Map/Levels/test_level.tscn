@@ -1,9 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbne37m7cf8yo"]
+[gd_scene load_steps=3 format=3 uid="uid://bbne37m7cf8yo"]
 
 [ext_resource type="PackedScene" uid="uid://m55s6syqu42e" path="res://Map/Tiles/tile_map.tscn" id="1_i2d15"]
-[ext_resource type="PackedScene" uid="uid://bdls1t8x30si7" path="res://Towers/red_tower.tscn" id="3_5w8sj"]
-[ext_resource type="PackedScene" uid="uid://bgu1k75b7yewm" path="res://Towers/green_tower.tscn" id="3_ojv67"]
-[ext_resource type="PackedScene" uid="uid://b0wcn3ga8io6p" path="res://Towers/missile_tower.tscn" id="5_54cr4"]
 [ext_resource type="PackedScene" uid="uid://t7japk2bxf06" path="res://Map/Levels/test_route.tscn" id="5_r3gdw"]
 
 [node name="TestLevel" type="Node2D"]
@@ -18,12 +15,3 @@ layer_3/tile_data = PackedInt32Array(1245200, 131072, 3, 983063, 131072, 3, 6553
 [node name="MapRoute" parent="." instance=ExtResource("5_r3gdw")]
 
 [node name="Turrets" type="Node2D" parent="."]
-
-[node name="RedTower" parent="Turrets" instance=ExtResource("3_5w8sj")]
-position = Vector2(536, 200)
-
-[node name="GreenTower" parent="Turrets" instance=ExtResource("3_ojv67")]
-position = Vector2(200, 136)
-
-[node name="MissileTower" parent="Turrets" instance=ExtResource("5_54cr4")]
-position = Vector2(912, 152)

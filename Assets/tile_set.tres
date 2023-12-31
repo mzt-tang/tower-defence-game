@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cphp3ixiosmdm"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cphp3ixiosmdm"]
 
 [ext_resource type="Texture2D" uid="uid://73cndefwpdfl" path="res://Assets/tiles_sheet.png" id="1_067qg"]
+[ext_resource type="Texture2D" uid="uid://j4r20483ud45" path="res://Assets/obstructed.png" id="2_mjsfl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgln1"]
 texture = ExtResource("1_067qg")
@@ -482,6 +483,12 @@ texture_region_size = Vector2i(64, 64)
 11:0/0/terrains_peering_bit/bottom_left_corner = 3
 11:0/0/terrains_peering_bit/left_side = 3
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_od2rf"]
+texture = ExtResource("2_mjsfl")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+
 [resource]
 tile_size = Vector2i(64, 64)
 terrain_set_0/mode = 0
@@ -494,3 +501,4 @@ terrain_set_0/terrain_2/color = Color(0, 0.392157, 0.870588, 1)
 terrain_set_0/terrain_3/name = "Shadows"
 terrain_set_0/terrain_3/color = Color(0.486275, 0.968627, 0.921569, 1)
 sources/0 = SubResource("TileSetAtlasSource_jgln1")
+sources/1 = SubResource("TileSetAtlasSource_od2rf")
